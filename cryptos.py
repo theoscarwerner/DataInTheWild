@@ -1,9 +1,4 @@
 s = """
-$61,906.65
-18.847.837 BTC	$39.044.133.711
--0,34%
-0,21%
-7,72%
 1
 Bitcoin
 Bitcoin
@@ -3350,4 +3345,6 @@ $203,911,839
 """
 
 s = s.split('\n\n')
-crypto_translation = {info.split('\n')[8]: info.split('\n')[7] for info in s[:100]}
+crypto_translation = {info.split('\n')[-2]: info.split('\n')[-3] for info in s[:100]}
+
+print(crypto_translation)
